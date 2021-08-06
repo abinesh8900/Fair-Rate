@@ -1,0 +1,43 @@
+.hero {
+  background: url(../images/group-11@3x.webp);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.hero-content {
+  max-width: 429px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &__heading {
+    color: clr(primary-grey);
+    line-height: lh(lh-1.14);
+  }
+
+  &__desc {
+    margin-top: 21px;
+    font-size: fs(fs-14);
+    line-height: lh(lh-1.71);
+    color: clr(secondary-grey);
+  }
+  &__caption {
+    margin-top: 43px;
+    font-size: fs(fs-12);
+    color: clr(tertiary-grey);
+  }
+  &__navigation {
+    @include btn-size(20px 37px, fs-14);
+    margin-top: 10px;
+  }
+}
+
+.info-warp {
+  padding: 116px 0 89px 0;
+
+  &__heading {
+    color: clr(primary-grey);
+    margin-bottom: 50px;
+  }
+}

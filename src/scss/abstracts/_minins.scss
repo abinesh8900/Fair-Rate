@@ -1,0 +1,15 @@
+@mixin flex-container($justify-content: false, $align-items: false) {
+  display: flex;
+
+  @if $justify-content != false {
+    justify-content: $justify-content;
+  }
+  @if $align-items != false {
+    align-items: $align-items;
+  }
+}
+
+@mixin btn-size($padding-value, $fs-value) {
+  padding: $padding-value;
+  font-size: fs($fs-value);
+}

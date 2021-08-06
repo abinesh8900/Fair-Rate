@@ -1,0 +1,13 @@
+.primary-btn,
+.secondary-btn {
+  font-weight: 600;
+  border-radius: 2px;
+}
+.primary-btn {
+  background-color: clr(primary-blue);
+  color: clr(primary-white);
+}
+.secondary-btn {
+  background-color: clr(primary-white);
+  color: clr(primary-blue);
+}
