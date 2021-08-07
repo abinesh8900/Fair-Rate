@@ -1,0 +1,43 @@
+.card-item {
+  max-width: 300px;
+  padding: 34px 50px 41px 50px;
+  background-color: clr(primary-white);
+  box-shadow: 0 8px 20px 0 rgba(224, 224, 224, 0.5);
+  border-radius: 3px;
+
+  &-arrow {
+    margin-right: 20px;
+    position: relative;
+  }
+  &__picture {
+    margin-bottom: 31px;
+  }
+  &__heading {
+    font-size: fs(fs-15);
+    line-height: lh(lh-2.33);
+    font-weight: 600;
+    color: clr(secondary-grey);
+  }
+  &__desc {
+    font-size: fs(fs-14);
+    font-weight: 600;
+    line-height: lh(lh-1.71);
+    color: clr(primary-light-grey);
+  }
+  &__arrow {
+    color: clr(secondary-blue-grey);
+    height: 51px;
+    width: 51px;
+    border: 1px solid clr(secondary-blue-grey);
+    font-size: fs(fs-28);
+    background-color: clr(primary-white);
+    font-weight: 200;
+    border-radius: 50%;
+    padding: 12px;
+    position: absolute;
+    right: -38px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+  }
+}

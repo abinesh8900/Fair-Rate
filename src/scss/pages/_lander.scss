@@ -20,7 +20,7 @@
     margin-top: 21px;
     font-size: fs(fs-14);
     line-height: lh(lh-1.71);
-    color: clr(secondary-grey);
+    color: clr(primary-light-grey);
   }
   &__caption {
     margin-top: 43px;
@@ -33,11 +33,104 @@
   }
 }
 
-.info-warp {
+.info-wrap {
   padding: 116px 0 89px 0;
 
   &__heading {
     color: clr(primary-grey);
     margin-bottom: 50px;
+  }
+  &__card-holder {
+    @include flex-container($justify-content: center);
+  }
+  &__desc {
+    max-width: 639px;
+    margin-top: 87px;
+    font-size: fs(fs-22);
+    line-height: 1.82;
+    color: clr(primary-grey);
+  }
+  &__caption {
+    margin-top: 35px;
+    font-size: fs(fs-14);
+    line-height: lh(lh-1.57);
+
+    & > a {
+      color: clr(secondary-blue);
+    }
+  }
+}
+
+.banner {
+  background-image: url(/dist/images/group-2@2x.webp);
+  height: 574px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: clr(primary-white);
+
+  & > div {
+    padding-top: 60px;
+    position: relative;
+    height: 100vh;
+  }
+
+  &__heading {
+  }
+}
+.banner-content {
+  max-width: 420px;
+  margin-right: 60px;
+  position: absolute;
+  top: 55%;
+  right: 0;
+  transform: translateY(-50%);
+
+  &__heading {
+    font-size: fs(fs-24);
+  }
+  &__desc {
+    margin-top: 19px;
+    font-size: fs(fs-14);
+    line-height: lh(lh-1.64);
+  }
+  &__navigation {
+    @include btn-size(20px 37px, 14px);
+    margin-top: 30px;
+  }
+}
+.banner-content__list {
+  margin-top: 20px;
+  font-size: fs(fs-14);
+  & > li > span {
+    font-size: fs(fs-20);
+    vertical-align: text-bottom;
+    margin-right: 5px;
+  }
+  &-item {
+    line-height: lh(lh-2.86);
+  }
+}
+
+.support-wrap {
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  &__heading {
+    margin-top: 5px;
+    color: clr(primary-grey);
+    font-size: fs(fs-24);
+  }
+  &__desc {
+    margin-top: 30px;
+    max-width: 526px;
+    font-size: fs(fs-14);
+    line-height: lh(lh-1.57);
+    color: clr(primary-grey);
+  }
+  &__navigation {
+    margin-top: 14px;
+    font-size: fs(fs-18);
+    color: clr(tertiary-blur);
   }
 }
