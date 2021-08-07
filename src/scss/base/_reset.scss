@@ -94,6 +94,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-family: OpenSans;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -133,4 +134,10 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+h1 {
+  font-size: fs(fs-44);
+}
+h2 {
+  font-size: fs(fs-32);
 }
