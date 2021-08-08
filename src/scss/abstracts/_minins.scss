@@ -1,4 +1,8 @@
-@mixin flex-container($justify-content: false, $align-items: false) {
+@mixin flex-container(
+  $justify-content: false,
+  $align-items: false,
+  $flex-wrap: fales
+) {
   display: flex;
 
   @if $justify-content != false {
@@ -7,9 +11,20 @@
   @if $align-items != false {
     align-items: $align-items;
   }
+  @if $flex-wrap != false {
+    flex-wrap: $flex-wrap;
+  }
 }
 
 @mixin btn-size($padding-value, $fs-value) {
   padding: $padding-value;
   font-size: fs($fs-value);
+}
+
+@mixin breakpoint($point) {
+  @if $point == md {
+    @media screen and (max-width: 900px) {
+      @content;
+    }
+  }
 }

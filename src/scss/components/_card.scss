@@ -14,13 +14,16 @@
   }
   &__heading {
     font-size: fs(fs-15);
-    line-height: lh(lh-2.33);
+    // line-height: lh(lh-2.33);
+    line-height: lh(lh-1.57);
     font-weight: 600;
     color: clr(secondary-grey);
   }
   &__desc {
     font-size: fs(fs-14);
     font-weight: 600;
+    margin-top: 10px;
+    line-height: lh(lh-2.33);
     line-height: lh(lh-1.71);
     color: clr(primary-light-grey);
   }
@@ -39,5 +42,12 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 4;
+  }
+
+  @include breakpoint(md) {
+    padding: 20px 25px;
+
+    &__heading {
+    }
   }
 }

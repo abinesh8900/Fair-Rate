@@ -1,9 +1,9 @@
 .footer {
   background-color: clr(secondary-white);
-  padding: 48px 0 85px 0;
+  padding: 28px 0 85px 0;
 }
 .footer-wrap {
-  @include flex-container($justify-content: space-between);
+  @include flex-container($justify-content: space-between, $flex-wrap: wrap);
 }
 .footer-links > p,
 .footer-nav-header {
@@ -47,6 +47,10 @@
     font-size: fs(fs-14);
     line-height: lh(lh-1.93);
   }
+}
+.footer-links,
+.footer-wrap__nav-holder {
+  margin: 20px 30px 0 0;
 }
 .copy-right {
   margin-top: 73px;
