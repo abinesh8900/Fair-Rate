@@ -19,36 +19,36 @@
   &__left {
     @include flex-container($align-items: center);
   }
+}
 
-  &__nav-phone {
-    margin-left: 48px;
+.header-wrap__nav-phone {
+  margin-left: 48px;
+
+  &--picture-bg {
+    display: none;
+  }
+  & > span {
+    color: clr(primary-grey);
+    font-size: fs(fs-14);
+    font-weight: 600;
+  }
+  @include breakpoint(md) {
+    margin-left: 28px;
+    &--picture-bg {
+      display: block;
+    }
+    &--picture {
+      display: none;
+    }
     & > span {
-      color: clr(primary-grey);
-      font-size: fs(fs-14);
-      font-weight: 600;
-    }
-    @include breakpoint(md) {
-      margin-left: 24px;
-      background-color: #2dccd2;
-      padding: 9px;
-      border-radius: 50%;
-
-      &--picture {
-        width: 22px;
-        height: 20px;
-      }
-      &--picture > path[fill] {
-        fill: clr(primary-white);
-      }
-      & > span {
-        display: none;
-      }
-    }
-    @include breakpoint(xs) {
-      margin-left: 10px;
+      display: none;
     }
   }
+  @include breakpoint(xs) {
+    margin-left: 10px;
+  }
 }
+
 .sticky-nav {
   background-color: clr(primary-white);
   box-shadow: 0 15px 25px 0 clr(opacity-primary-black),
