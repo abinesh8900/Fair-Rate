@@ -4,6 +4,10 @@
 }
 .footer-wrap {
   @include flex-container($justify-content: space-between, $flex-wrap: wrap);
+
+  @include breakpoint(xs) {
+    @include flex-container($flex-direction: column);
+  }
 }
 .footer-links > p,
 .footer-nav-header {
@@ -49,8 +53,13 @@
   }
 }
 .footer-links,
+.footer-wrap__nav-holder,
+.footer-wrap__content {
+  margin-top: 20px;
+}
+.footer-links,
 .footer-wrap__nav-holder {
-  margin: 20px 30px 0 0;
+  margin-right: 30px;
 }
 .copy-right {
   margin-top: 73px;

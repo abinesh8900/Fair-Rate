@@ -8,6 +8,11 @@
   &-arrow {
     margin-right: 20px;
     position: relative;
+
+    @include breakpoint(sm) {
+      margin-right: unset;
+      margin-bottom: 20px;
+    }
   }
   &__picture {
     margin-bottom: 31px;
@@ -42,6 +47,13 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 4;
+
+    @include breakpoint(sm) {
+      top: unset;
+      right: 50%;
+      bottom: -38px;
+      transform: translateX(50%) rotate(90deg);
+    }
   }
 
   @include breakpoint(md) {

@@ -1,7 +1,8 @@
 @mixin flex-container(
   $justify-content: false,
   $align-items: false,
-  $flex-wrap: fales
+  $flex-wrap: false,
+  $flex-direction: false
 ) {
   display: flex;
 
@@ -14,6 +15,18 @@
   @if $flex-wrap != false {
     flex-wrap: $flex-wrap;
   }
+  @if $flex-direction != false {
+    flex-direction: $flex-direction;
+  }
+}
+
+@mixin flex-item($flex-basis: false, $align-self: false) {
+  @if $flex-basis != false {
+    flex-basis: $flex-basis;
+  }
+  @if $align-self != false {
+    align-self: $align-self;
+  }
 }
 
 @mixin btn-size($padding-value, $fs-value) {
@@ -24,6 +37,17 @@
 @mixin breakpoint($point) {
   @if $point == md {
     @media screen and (max-width: 900px) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media screen and (max-width: 750px) {
+      .hidden {
+        display: none;
+      }
+      @content;
+    }
+  } @else if $point == xs {
+    @media screen and (max-width: 450px) {
       @content;
     }
   }

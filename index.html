@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="dist/css/style.css" />
     <title>Fair Rate</title>
   </head>
-  <body>
+  <body id="main">
     <header class="top-header" id="main-header">
       <div class="container mx-auto header-wrap">
         <div class="header-wrap__left">
@@ -60,27 +60,30 @@
             <span>+62 202 555 0117</span>
           </a>
         </div>
-        <div class="header-wrap__right">
-          <ul class="nav-holder">
-            <li class="nav-holder__nav-item">
-              <a href="javascript:void(0)"> RATES</a>
-            </li>
-            <li class="nav-holder__nav-item">
-              <a href="javascript:void(0)">ABOUT US</a>
-            </li>
-            <li class="nav-holder__nav-item">
-              <a href="javascript:void(0)">RESOURCES</a>
-            </li>
-            <li class="nav-holder__nav-item">
-              <a href="javascript:void(0)">FAQ</a>
-            </li>
-          </ul>
-          <a
-            href="javascript:void(0)"
-            class="inline-block header-navigation primary-btn"
-            >Get Started</a
-          >
-        </div>
+        <button type="button" class="nav-menu" id="menu-btn">
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nav-holder hidden" id="show-nav">
+          <li class="nav-holder__nav-item">
+            <a href="javascript:void(0)"> RATES</a>
+          </li>
+          <li class="nav-holder__nav-item">
+            <a href="javascript:void(0)">ABOUT US</a>
+          </li>
+          <li class="nav-holder__nav-item">
+            <a href="javascript:void(0)">RESOURCES</a>
+          </li>
+          <li class="nav-holder__nav-item">
+            <a href="javascript:void(0)">FAQ</a>
+          </li>
+          <li>
+            <a
+              href="javascript:void(0)"
+              class="inline-block primary-btn header-navigation"
+              >Get Started
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <main>

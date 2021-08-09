@@ -42,6 +42,10 @@
   }
   &__card-holder {
     @include flex-container($justify-content: center);
+
+    @include breakpoint(sm) {
+      @include flex-container($flex-direction: column, $align-items: center);
+    }
   }
   &__desc {
     max-width: 639px;
@@ -49,6 +53,10 @@
     font-size: fs(fs-22);
     line-height: 1.82;
     color: clr(primary-grey);
+
+    @include breakpoint(xs) {
+      font-size: fs(fs-20);
+    }
   }
   &__caption {
     margin-top: 35px;
@@ -63,12 +71,15 @@
 
 .banner {
   background-image: url(../images/group-2@2x.webp);
-  height: 574px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
   color: clr(primary-white);
+
+  @include breakpoint(xs) {
+    background-position: right;
+  }
 
   & > div {
     padding-top: 60px;
@@ -87,8 +98,21 @@
   right: 0;
   transform: translateY(-50%);
 
+  @include breakpoint(sm) {
+    margin-right: unset;
+    margin-left: 80px;
+  }
+
+  @include breakpoint(xs) {
+    margin: 0 20px;
+  }
+
   &__heading {
     font-size: fs(fs-24);
+
+    @include breakpoint(xs) {
+      font-size: fs(fs-20);
+    }
   }
   &__desc {
     margin-top: 19px;

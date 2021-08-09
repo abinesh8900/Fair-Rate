@@ -16,8 +16,7 @@
   padding-bottom: 19px;
   border-bottom: 2px solid clr(secondary-blue-grey);
 
-  &__left,
-  &__right {
+  &__left {
     @include flex-container($align-items: center);
   }
 
@@ -45,6 +44,9 @@
         display: none;
       }
     }
+    @include breakpoint(xs) {
+      margin-left: 10px;
+    }
   }
 }
 .sticky-nav {
@@ -56,17 +58,89 @@
   border-bottom: none;
 }
 .nav-holder {
-  @include flex-container($justify-content: space-between);
-  margin-right: 30px;
+  @include flex-container(
+    $justify-content: space-between,
+    $align-items: center
+  );
+
+  @include breakpoint(sm) {
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 15px 25px 0 clr(opacity-primary-black),
+      0 8px 8px 0 clr(opacity-secondary-black);
+    background-color: clr(primary-white);
+    margin-right: unset;
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    right: 30px;
+    @include flex-container($flex-direction: column, $align-items: center);
+  }
 }
 .nav-holder__nav-item {
-  margin-left: 26px;
+  margin-right: 26px;
 
   & > a {
     color: clr(primary-blue-grey);
     font-size: fs(fs-12);
   }
+
+  @include breakpoint(sm) {
+    padding: 30px 0;
+    margin-right: unset;
+  }
 }
 .header-navigation {
   @include btn-size(8px 19px, fs-13);
+
+  & > a {
+    color: clr(primary-white);
+  }
+}
+@include breakpoint(sm) {
+  .nav-menu {
+    position: relative;
+    width: 30px;
+    height: 25px;
+  }
+  .hamburger,
+  .hamburger::after,
+  .hamburger::before {
+    width: 30px;
+    height: 3px;
+    background-color: clr(primary-grey);
+    position: absolute;
+    display: inline-block;
+    border-radius: 4px;
+    transition: 300ms;
+  }
+  .hamburger::after,
+  .hamburger::before {
+    content: "";
+    height: 2px;
+  }
+  .hamburger {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .hamburger::before {
+    left: 0;
+    top: -10px;
+  }
+  .hamburger::after {
+    left: 0;
+    bottom: -10px;
+  }
+  .nav-menu.active .hamburger {
+    background-color: clr(transparent);
+  }
+  .nav-menu.active .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  .nav-menu.active .hamburger::after {
+    top: 0;
+    transform: rotate(135deg);
+  }
 }
