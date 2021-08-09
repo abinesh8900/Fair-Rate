@@ -112,13 +112,17 @@
   .hamburger,
   .hamburger::after,
   .hamburger::before {
-    width: 30px;
+    width: 100%;
     height: 3px;
     background-color: clr(primary-grey);
     position: absolute;
     display: inline-block;
     border-radius: 4px;
     transition: 300ms;
+
+    @include breakpoint(xs) {
+      width: 26px;
+    }
   }
   .hamburger::after,
   .hamburger::before {
@@ -133,10 +137,17 @@
   .hamburger::before {
     left: 0;
     top: -10px;
+
+    @include breakpoint(xs) {
+      top: -8px;
+    }
   }
   .hamburger::after {
     left: 0;
     bottom: -10px;
+    @include breakpoint(xs) {
+      bottom: -8px;
+    }
   }
   .nav-menu.active .hamburger {
     background-color: clr(transparent);
