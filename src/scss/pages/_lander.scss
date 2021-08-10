@@ -3,16 +3,14 @@
   height: 100vh;
   background-position: center;
   background-size: cover;
-  position: relative;
-
+  @include position(relative);
   @include breakpoint(lg) {
     background-image: url(../images/group-11.png);
   }
 }
 .hero-content {
   max-width: 429px;
-  position: absolute;
-  top: 50%;
+  @include position(absolute, $top: 50%);
   transform: translateY(-50%);
 
   &__heading {
@@ -103,9 +101,8 @@
 .banner-content {
   max-width: 420px;
   margin-right: 60px;
-  position: absolute;
-  top: 55%;
-  right: 0;
+  @include position(absolute, $top: 55%, $right: 0);
+
   transform: translateY(-50%);
 
   @include breakpoint(sm) {
@@ -115,7 +112,7 @@
 
   @include breakpoint(xs) {
     margin: 0 20px;
-    top: 60%;
+    @include position($top: 60%);
   }
 
   &__heading {

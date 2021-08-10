@@ -34,6 +34,20 @@
   font-size: fs($fs-value);
 }
 
+@mixin position(
+  $position: null,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
 @mixin breakpoint($point) {
   @if $point == lg {
     @media screen and (max-width: 1200px) {
