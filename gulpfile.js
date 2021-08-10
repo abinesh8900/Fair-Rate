@@ -4,6 +4,7 @@ const sass = require("gulp-sass")(require("node-sass"));
 const prefix = require("gulp-autoprefixer");
 const minify = require("gulp-clean-css");
 const terser = require("gulp-terser");
+const imagemin = require("gulp-imagemin");
 const imagewebp = require("gulp-webp");
 const browserSync = require("browser-sync").create();
 
@@ -21,6 +22,14 @@ function compilescss() {
 // creat watchtask
 function jsmin() {
   return src("src/js/*.js").pipe(terser()).pipe(dest("dist/js"));
+}
+
+//compress images
+
+function compressImg() {
+  return src("src/images/*{jpg,png}")
+    .pipe(imagemin())
+    .pipe(dest("dist/images"));
 }
 
 //webp images
@@ -50,6 +59,7 @@ function watchTask() {
   watch("*.html", browserSyncRelode);
   watch("src/scss/**/*.scss", series(compilescss, browserSyncRelode));
   watch("src/js/**/*.js", series(jsmin, browserSyncRelode));
+  watch("src/js/**/*.jpg,png}", compressImg);
   watch("dist/images/*.{jpg,png}", webpImage);
 }
 // default gulp
@@ -57,6 +67,7 @@ function watchTask() {
 exports.default = series(
   compilescss,
   jsmin,
+  compressImg,
   webpImage,
   browserSyncServer,
   watchTask

@@ -75,16 +75,16 @@
 }
 
 .banner {
-  background-image: url(../images/group-2@2x.png);
+  background-image: url(../images/group-2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
   color: clr(primary-white);
 
-  @include breakpoint(lg) {
-    background-image: url(../images/group-2.png);
-  }
+  // @include breakpoint(lg) {
+  //   background-image: url(../images/group-2.png);
+  // }
 
   @include breakpoint(xs) {
     background-position: right;
