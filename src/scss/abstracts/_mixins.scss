@@ -35,6 +35,11 @@
 }
 
 @mixin breakpoint($point) {
+  @if $point == lg {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  }
   @if $point == md {
     @media screen and (max-width: 900px) {
       @content;

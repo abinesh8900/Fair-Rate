@@ -1,50 +1,90 @@
-// font
-$font-size: (
-  fs-12: 12px,
-  fs-13: 13px,
-  fs-14: 14px,
-  fs-15: 15px,
-  fs-18: 18px,
-  fs-20: 20px,
-  fs-22: 22px,
-  fs-24: 24px,
-  fs-28: 28px,
-  fs-32: 32px,
-  fs-40: 40px,
-  fs-44: 44px,
-);
+// // font
+// $font-size: (
+//   fs-12: 12px,
+//   fs-13: 13px,
+//   fs-14: 14px,
+//   fs-15: 15px,
+//   fs-18: 18px,
+//   fs-20: 20px,
+//   fs-22: 22px,
+//   fs-24: 24px,
+//   fs-28: 28px,
+//   fs-32: 32px,
+//   fs-40: 40px,
+//   fs-44: 44px,
+// );
 
-$line-height: (
-  lh-1: 1,
-  lh-1.14: 1.14,
-  lh-1.4: 1.4,
-  lh-1.57: 1.57,
-  lh-1.64: 1.64,
-  lh-1.71: 1.71,
-  lh-1.75: 1.75,
-  lh-1.82: 1.82,
-  lh-1.93: 1.93,
-  lh-2: 2,
-  lh-2.33: 2.33,
-  lh-2.86: 2.86,
-);
+// $line-height: (
+//   lh-1: 1,
+//   lh-1.14: 1.14,
+//   lh-1.4: 1.4,
+//   lh-1.57: 1.57,
+//   lh-1.64: 1.64,
+//   lh-1.71: 1.71,
+//   lh-1.75: 1.75,
+//   lh-1.82: 1.82,
+//   lh-1.93: 1.93,
+//   lh-2: 2,
+//   lh-2.33: 2.33,
+//   lh-2.86: 2.86,
+// );
 
 $colors: (
   transparent: transparent,
   primary-white: #ffffff,
   secondary-white: #f4f6f8,
-  primary-black: #000000,
   opacity-primary-black: #1b1f241a,
   opacity-secondary-black: #36363614,
   primary-blue: #23c0f5,
   secondary-blue: #4ad5f6,
   tertiary-blur: #007ace,
+  primary-hover-blue: #10a5d6,
   primary-grey: #454f5b,
   secondary-grey: #47495a,
   tertiary-grey: #919eab,
+  primary-opacity-grey: #e0e0e080,
   primary-light-grey: #6a7c92,
   secondary-light-grey: #637381,
   tertiary-light-grey: #8f9ea6,
   primary-blue-grey: #69939d,
   secondary-blue-grey: #c4cdd5,
 );
+
+// $colors-list: (
+//   $opacity-black: (
+//     primary: #1b1f241a,
+//     secondary: #36363614,
+//   ),
+//   $opacity-grey: (
+//     primary: #e0e0e080,
+//   ),
+//   $blue-grey: (
+//     primary: #69939d,
+//     secondary: #c4cdd5,
+//   ),
+//   $light-grey: (
+//     primary: #6a7c92,
+//     secondary: #637381,
+//     tertiary: #8f9ea6,
+//   ),
+//   $grey: (
+//     primary: #454f5b,
+//     secondary: #47495a,
+//     tertiary: #919eab,
+//   ),
+//   $sky-blue: (
+//     primary: #23c0f5,
+//     secondary: #4ad5f6,
+//     tertiary: #10a5d6,
+//   ),
+//   $blue: (
+//     primary: #007ace,
+//   ),
+//   $white: (
+//     primary: #ffffff,
+//     secondary: #f4f6f8,
+//   ),
+//   $transparent: (
+//     transparent: transparent,
+//   ),
+// );

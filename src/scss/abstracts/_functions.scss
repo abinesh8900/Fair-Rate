@@ -1,10 +1,10 @@
-@function fs($fs-value) {
-  @return map-get($font-size, $fs-value);
-}
+// @function fs($fs-value) {
+//   @return map-get($font-size, $fs-value);
+// }
 
-@function lh($lh-value) {
-  @return map-get($line-height, $lh-value);
-}
+// @function lh($lh-value) {
+//   @return map-get($line-height, $lh-value);
+// }
 
 @function clr($clr-value) {
   @return map-get($colors, $clr-value);

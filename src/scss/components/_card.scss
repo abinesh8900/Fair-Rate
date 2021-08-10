@@ -2,7 +2,7 @@
   max-width: 300px;
   padding: 34px 50px 41px 50px;
   background-color: clr(primary-white);
-  box-shadow: 0 8px 20px 0 rgba(224, 224, 224, 0.5);
+  box-shadow: 0 8px 20px 0 clr(primary-opacity-grey);
   border-radius: 3px;
 
   &-arrow {
@@ -18,18 +18,17 @@
     margin-bottom: 31px;
   }
   &__heading {
-    font-size: fs(fs-15);
-    // line-height: lh(lh-2.33);
-    line-height: lh(lh-1.57);
+    font-size: 15px;
+    margin-bottom: 10px;
+    line-height: 1.57;
     font-weight: 600;
     color: clr(secondary-grey);
   }
   &__desc {
-    font-size: fs(fs-14);
+    font-size: 14px;
     font-weight: 600;
-    margin-top: 10px;
-    line-height: lh(lh-2.33);
-    line-height: lh(lh-1.71);
+
+    line-height: 1.71;
     color: clr(primary-light-grey);
   }
   &__arrow {
@@ -37,7 +36,7 @@
     height: 51px;
     width: 51px;
     border: 1px solid clr(secondary-blue-grey);
-    font-size: fs(fs-28);
+    font-size: 28px;
     background-color: clr(primary-white);
     font-weight: 200;
     border-radius: 50%;
@@ -58,8 +57,5 @@
 
   @include breakpoint(md) {
     padding: 20px 25px;
-
-    &__heading {
-    }
   }
 }

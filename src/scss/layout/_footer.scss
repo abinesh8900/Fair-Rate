@@ -1,8 +1,9 @@
 .footer {
   background-color: clr(secondary-white);
-  padding: 28px 0 85px 0;
+  padding: 48px 0 85px 0;
 }
 .footer-wrap {
+  margin-bottom: 73px;
   @include flex-container($justify-content: space-between, $flex-wrap: wrap);
 
   @include breakpoint(xs) {
@@ -15,7 +16,7 @@
   font-size: 12px;
 }
 .footer-links > p {
-  line-height: lh(lh-1.75);
+  line-height: 1.75;
 
   & > a {
     color: clr(primary-blue);
@@ -24,7 +25,7 @@
 .footer-list-phone {
   margin-top: 12px;
   & > span {
-    font-size: fs(fs-18);
+    font-size: 18px;
     color: clr(primary-grey);
   }
 }
@@ -39,30 +40,33 @@
 }
 .footer-nav-item > a {
   color: clr(primary-grey);
-  font-size: fs(fs-14);
-  line-height: lh(lh-2);
+  font-size: 14px;
+  line-height: 2;
 }
 .footer-wrap__content {
   max-width: 362px;
-
+  & > a {
+    margin-bottom: 20px;
+  }
   & > p {
-    margin-top: 20px;
     color: clr(primary-grey);
-    font-size: fs(fs-14);
-    line-height: lh(lh-1.93);
+    font-size: 14px;
+    line-height: 1.93;
   }
 }
 .footer-links,
-.footer-wrap__nav-holder,
-.footer-wrap__content {
-  margin-top: 20px;
+.footer-wrap__nav-holder {
+  margin-bottom: 20px;
 }
 .footer-links,
 .footer-wrap__nav-holder {
   margin-right: 30px;
 }
 .copy-right {
-  margin-top: 73px;
-  font-size: fs(fs-12);
+  font-size: 12px;
   color: clr(tertiary-light-grey);
+
+  & > a {
+    color: inherit;
+  }
 }

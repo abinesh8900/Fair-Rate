@@ -16,3 +16,30 @@
 .menu-is-open {
   overflow: hidden;
 }
+
+.heading-1 {
+  font-size: 44px;
+  @include breakpoint(sm) {
+    font-size: 40px;
+  }
+  @include breakpoint(xs) {
+    font-size: 34px;
+    line-height: 1.4;
+  }
+}
+.heading-2 {
+  font-size: 32px;
+  @include breakpoint(sm) {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+  @include breakpoint(xs) {
+    font-size: 24px;
+  }
+}
+.heading-3 {
+  font-size: 24px;
+  @include breakpoint(xs) {
+    font-size: 22px;
+  }
+}

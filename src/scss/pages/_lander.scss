@@ -1,9 +1,13 @@
 .hero {
-  background: url(../images/group-11@3x.webp);
+  background-image: url(..dist/images/group-11@2x.png);
   height: 100vh;
   background-position: center;
   background-size: cover;
   position: relative;
+
+  @include breakpoint(lg) {
+    background-image: url(../images/group-11.png);
+  }
 }
 .hero-content {
   max-width: 429px;
@@ -13,23 +17,23 @@
 
   &__heading {
     color: clr(primary-grey);
-    line-height: lh(lh-1.14);
+    line-height: 1.14;
+    margin-bottom: 21px;
   }
 
   &__desc {
-    margin-top: 21px;
-    font-size: fs(fs-14);
-    line-height: lh(lh-1.71);
+    font-size: 14px;
+    line-height: 1.71;
     color: clr(primary-light-grey);
+    margin-bottom: 43px;
   }
   &__caption {
-    margin-top: 43px;
-    font-size: fs(fs-12);
+    font-size: 12px;
     color: clr(tertiary-grey);
+    margin-bottom: 10px;
   }
   &__navigation {
-    @include btn-size(20px 37px, fs-14);
-    margin-top: 10px;
+    @include btn-size(20px 37px, 14px);
   }
 }
 
@@ -41,6 +45,7 @@
     margin-bottom: 50px;
   }
   &__card-holder {
+    margin-bottom: 87px;
     @include flex-container($justify-content: center);
 
     @include breakpoint(sm) {
@@ -49,19 +54,19 @@
   }
   &__desc {
     max-width: 639px;
-    margin-top: 87px;
-    font-size: fs(fs-22);
+    margin-bottom: 35px;
+    font-size: 22px;
     line-height: 1.82;
     color: clr(primary-grey);
 
     @include breakpoint(xs) {
-      font-size: fs(fs-20);
+      font-size: 20px;
     }
   }
   &__caption {
-    margin-top: 35px;
-    font-size: fs(fs-14);
-    line-height: lh(lh-1.57);
+    font-size: 14px;
+    line-height: 1.57;
+    color: clr(secondary-light-grey);
 
     & > a {
       color: clr(secondary-blue);
@@ -70,12 +75,16 @@
 }
 
 .banner {
-  background-image: url(../images/group-2@2x.webp);
+  background-image: url(../images/group-2@2x.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
   color: clr(primary-white);
+
+  @include breakpoint(lg) {
+    background-image: url(../images/group-2.png);
+  }
 
   @include breakpoint(xs) {
     background-position: right;
@@ -89,9 +98,6 @@
     @include breakpoint(xs) {
       padding-top: 30px;
     }
-  }
-
-  &__heading {
   }
 }
 .banner-content {
@@ -113,34 +119,28 @@
   }
 
   &__heading {
-    font-size: fs(fs-24);
-
-    @include breakpoint(xs) {
-      font-size: fs(fs-20);
-    }
+    margin-bottom: 19px;
   }
   &__desc {
-    margin-top: 19px;
-    font-size: fs(fs-14);
-    line-height: lh(lh-1.64);
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.64;
   }
   &__navigation {
     @include btn-size(20px 37px, 14px);
-    margin-top: 30px;
   }
 }
 .banner-content__list {
-  margin-top: 20px;
-  font-size: fs(fs-14);
+  margin-bottom: 20px;
+  font-size: 14px;
   & > li > span {
-    font-size: fs(fs-20);
+    font-size: 20px;
     vertical-align: text-bottom;
     margin-right: 5px;
   }
   &-item {
-    line-height: lh(lh-1.82);
-    margin-top: 15px;
-    list-style: circle;
+    line-height: 1.82;
+    margin-bottom: 15px;
   }
 }
 
@@ -148,21 +148,23 @@
   padding-top: 90px;
   padding-bottom: 90px;
 
+  &__picture {
+    margin-bottom: 5px;
+  }
+
   &__heading {
-    margin-top: 5px;
+    margin-bottom: 30px;
     color: clr(primary-grey);
-    font-size: fs(fs-24);
   }
   &__desc {
-    margin-top: 30px;
+    margin-bottom: 14px;
     max-width: 526px;
-    font-size: fs(fs-14);
-    line-height: lh(lh-1.57);
+    font-size: 14px;
+    line-height: 1.57;
     color: clr(primary-grey);
   }
   &__navigation {
-    margin-top: 14px;
-    font-size: fs(fs-18);
+    font-size: 18px;
     color: clr(tertiary-blur);
   }
 }

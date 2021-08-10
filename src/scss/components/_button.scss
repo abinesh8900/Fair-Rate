@@ -6,6 +6,11 @@
 .primary-btn {
   background-color: clr(primary-blue);
   color: clr(primary-white);
+  transition: background-color 300ms;
+
+  &:hover {
+    background-color: clr(primary-hover-blue);
+  }
 }
 .secondary-btn {
   background-color: clr(primary-white);

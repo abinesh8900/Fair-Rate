@@ -135,26 +135,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-h1 {
-  font-size: fs(fs-44);
-  @include breakpoint(sm) {
-    font-size: fs(fs-40);
-  }
-  @include breakpoint(xs) {
-    font-size: 34px;
-    line-height: lh(lh-1.4);
-  }
-}
-h2 {
-  font-size: fs(fs-32);
-  @include breakpoint(sm) {
-    font-size: fs(fs-28);
-    line-height: lh(lh-1.4);
-  }
-  @include breakpoint(xs) {
-    font-size: fs(fs-24);
-  }
-}
 
 button {
   border: none;

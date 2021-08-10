@@ -11,27 +11,33 @@
     $justify-content: space-between,
     $align-items: center
   );
-
   padding-top: 27px;
   padding-bottom: 19px;
   border-bottom: 2px solid clr(secondary-blue-grey);
 
   &__left {
     @include flex-container($align-items: center);
+
+    @include breakpoint(sm) {
+      @include flex-container($justify-content: space-between);
+      width: 100%;
+    }
   }
 }
 
 .header-wrap__nav-phone {
   margin-left: 48px;
+  position: relative;
 
   &--picture-bg {
     display: none;
   }
   & > span {
     color: clr(primary-grey);
-    font-size: fs(fs-14);
+    font-size: 14px;
     font-weight: 600;
   }
+
   @include breakpoint(md) {
     margin-left: 28px;
     &--picture-bg {
@@ -44,8 +50,13 @@
       display: none;
     }
   }
+  @include breakpoint(sm) {
+    margin-left: unset;
+    margin-right: 28px;
+  }
+
   @include breakpoint(xs) {
-    margin-left: 10px;
+    margin-right: 16px;
   }
 }
 
@@ -82,15 +93,40 @@
 }
 .nav-holder__nav-item {
   margin-right: 26px;
+  position: relative;
 
   & > a {
     color: clr(primary-blue-grey);
-    font-size: fs(fs-12);
+    font-size: 12px;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 0;
+    background-color: clr(primary-blue);
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    transition: width 500ms ease-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  & > a:hover {
+    text-shadow: 0 0 0.8px clr(primary-grey);
   }
 
   @include breakpoint(sm) {
     padding: 30px 0;
     margin-right: unset;
+
+    &::after {
+      display: none;
+    }
   }
   @include breakpoint(xs) {
     padding: 25px 0;
@@ -98,6 +134,7 @@
 }
 .header-navigation {
   @include btn-size(8px 19px, fs-13);
+  margin-left: 12px;
 
   & > a {
     color: clr(primary-white);
