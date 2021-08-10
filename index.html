@@ -18,9 +18,16 @@
       <div class="container mx-auto header-wrap">
         <div class="header-wrap__left">
           <a href="javascript:void(0)" class="header-wrap__nav-logo">
-            <svg width="186" height="39">
-              <use xlink:href="dist/images/sprite-icon.svg#logo"></use>
-            </svg>
+            <picture class="inline-block">
+              <source
+                srcset="
+                  dist/images/logo.png    1x,
+                  dist/images/logo@2x.png 2x,
+                  dist/images/logo@3x.png 3x
+                "
+              />
+              <img src="dist/images/logo.png" alt="Fair Rate logo" />
+            </picture>
           </a>
           <a href="tel:+622025550117 " class="header-wrap__nav-phone">
             <svg width="14" height="14" class="header-wrap__nav-phone--picture">
