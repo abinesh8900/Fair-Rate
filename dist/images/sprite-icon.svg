@@ -47,7 +47,7 @@
     </g>
   </symbol>
     <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 39" id="logo">
-    <g fill="none" fill-rule="evenodd"><text fill="#454F5B" font-family="OpenSans" font-weight="700" font-size="24">
+    <g fill="none" fill-rule="evenodd"><text fill="#454F5B" font-family="OpenSans" font-weight="700" font-size="23">
         <tspan x="87" y="29">FairRate</tspan>
       </text>
       <path fill="#4AD5F6" d="M27 6l27 33H0L27 6zm-4 27h8V22h-8v11z"></path>
